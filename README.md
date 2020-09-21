@@ -10,20 +10,22 @@ autoplotter is a python package for GUI based exploratory data analysis. It is b
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install autoplotter.
 
 ```bash
-pip install autoplotter
+$pip install autoplotter
 ```
 
 ## Usage
 
 ```python
 from autoplotter import run_app # Importing the autoplotter for GUI Based EDA
+import pandas as pd # Importing Pandas to read csv
 
-import plotly.express as px # Importing plotly express to load dataset
-df = px.data.tips() # Getting the   Restaurant data
+df = pd.read_csv("https://raw.githubusercontent.com/ersaurabhverma/autoplotter/master/Data/data.csv") # Reading data
 
-run_app(df) # Calling the autoplotter.run_app
+run_app(df,mode = "inline", host="127.0.0.1", port=5000) # Calling the autoplotter.run_app in inline mode
+
+run_app(df,mode = "external", host="127.0.0.1", port=5000) # Calling the autoplotter.run_app in external mode
 ```
-[![LWR-Recording-2.gif](https://s7.gifyu.com/images/LWR-Recording-2.gif)](https://gifyu.com/image/QGyH)
+[![Autoplotter.gif](https://s8.gifyu.com/images/Autoplotter.gif)](https://gifyu.com/image/gyrf)
 
 
 ## Contributing
@@ -33,7 +35,9 @@ Please make sure to update tests as appropriate.
 
 ## Support 
 
-- Support me by following on <a href="https://github.com/ersaurabhverma" target="_blank">Github</a> and <a href="https://www.linkedin.com/in/vermasaurabh8010/" target="_blank">LinkedIn</a>.
+- Support me by following on <a href="https://github.com/ersaurabhverma" target="_blank">Github</a> and <a href="https://www.linkedin.com/in/vermasaurabh8010/" target="_blank">LinkedIn</a>
+
+<a href="https://www.buymeacoffee.com/ersaurabhverma" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 
 ## License
